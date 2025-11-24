@@ -11,5 +11,6 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.akonicki26.catcoder.toolWindow.MyToolWindowFactory" id="CatCoder"/>
         <postStartupActivity implementation="com.akonicki26.catcoder.startup.MyProjectActivity" />
+        <typedHandler implementation="com.akonicki26.catcoder.services.EditorKeyListener" />
     </extensions>
 </idea-plugin>
