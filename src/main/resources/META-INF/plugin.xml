@@ -9,7 +9,7 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.akonicki26.catcoder.toolWindow.MyToolWindowFactory" id="CatCoder"/>
-        <postStartupActivity implementation="com.github.akonicki26.catcoder.startup.MyProjectActivity" />
+        <toolWindow factoryClass="com.akonicki26.catcoder.toolWindow.MyToolWindowFactory" id="CatCoder"/>
+        <postStartupActivity implementation="com.akonicki26.catcoder.startup.MyProjectActivity" />
     </extensions>
 </idea-plugin>

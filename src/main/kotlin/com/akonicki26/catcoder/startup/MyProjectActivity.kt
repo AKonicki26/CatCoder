@@ -1,4 +1,4 @@
-package com.github.akonicki26.catcoder.startup
+package com.akonicki26.catcoder.startup
 
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project

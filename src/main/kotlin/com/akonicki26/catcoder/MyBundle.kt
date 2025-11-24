@@ -1,4 +1,4 @@
-package com.github.akonicki26.catcoder
+package com.akonicki26.catcoder
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

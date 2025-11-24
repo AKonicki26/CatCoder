@@ -1,4 +1,4 @@
-package com.github.akonicki26.catcoder.toolWindow
+package com.akonicki26.catcoder.toolWindow
 
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
@@ -8,8 +8,8 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
-import com.github.akonicki26.catcoder.MyBundle
-import com.github.akonicki26.catcoder.services.MyProjectService
+import com.akonicki26.catcoder.MyBundle
+import com.akonicki26.catcoder.services.MyProjectService
 import javax.swing.JButton
 
 
