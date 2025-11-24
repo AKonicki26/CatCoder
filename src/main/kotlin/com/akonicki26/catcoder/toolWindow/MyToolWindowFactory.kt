@@ -9,6 +9,8 @@ import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
 import com.akonicki26.catcoder.MyBundle
+import com.akonicki26.catcoder.messages.KeyPressedMessage
+import com.akonicki26.catcoder.services.EditorKeyListener
 import com.akonicki26.catcoder.services.MyProjectService
 import javax.swing.JButton
 
@@ -40,6 +42,8 @@ class MyToolWindowFactory : ToolWindowFactory {
                     label.text = MyBundle.message("randomLabel", service.getRandomNumber())
                 }
             })
+
+            add(KeyPressedMessage.getLabel())
         }
     }
 }

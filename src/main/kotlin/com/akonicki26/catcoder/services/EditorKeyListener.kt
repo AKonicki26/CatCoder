@@ -1,4 +1,19 @@
 package com.akonicki26.catcoder.services
 
-class EditorKeyListener {
+import com.akonicki26.catcoder.MyBundle
+import com.akonicki26.catcoder.messages.KeyPressedMessage
+import com.intellij.codeInsight.editorActions.TypedHandlerDelegate
+import com.intellij.openapi.editor.Editor
+import com.intellij.openapi.project.Project
+import com.intellij.psi.PsiFile
+
+class EditorKeyListener : TypedHandlerDelegate() {
+    override fun charTyped(c: Char, project: Project, editor: Editor, file: PsiFile): Result {
+        println("charTyped: $c");
+        MyBundle.message("lastkeytyped", c.toString())
+
+        KeyPressedMessage.setLetter(c);
+
+        return Result.CONTINUE
+    }
 }
