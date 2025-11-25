@@ -10,12 +10,7 @@ import com.intellij.psi.PsiFile
 
 class EditorKeyListener : TypedHandlerDelegate() {
     override fun charTyped(c: Char, project: Project, editor: Editor, file: PsiFile): Result {
-        println("charTyped: $c");
-        MyBundle.message("lastkeytyped", c.toString())
-
-        KeyPressedMessage.setLetter(c);
-
-        GameManager.getInstance().on_key_pressed(c);
+        GameManager.getInstance().onKeyPressed(c)
 
         return Result.CONTINUE
     }

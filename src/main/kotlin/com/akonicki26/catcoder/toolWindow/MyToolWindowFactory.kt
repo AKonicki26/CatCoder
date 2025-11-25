@@ -5,16 +5,9 @@ import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
-import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBPanel
 import com.intellij.ui.content.ContentFactory
-import com.akonicki26.catcoder.MyBundle
-import com.akonicki26.catcoder.messages.KeyPressedMessage
-import com.akonicki26.catcoder.services.EditorKeyListener
-import javax.swing.Box
-import java.awt.Component
 import javax.swing.BoxLayout
-import javax.swing.JButton
 
 
 class MyToolWindowFactory : ToolWindowFactory {

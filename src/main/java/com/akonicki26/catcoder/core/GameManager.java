@@ -1,6 +1,9 @@
 package com.akonicki26.catcoder.core;
 
 
+import com.akonicki26.catcoder.messages.KeyPressedMessage;
+import com.google.common.util.concurrent.ServiceManager;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +13,9 @@ public class GameManager {
     public static GameManager getInstance() {
         return instance;
     }
-    private GameManager() {}
+    private GameManager() {
+
+    }
 
     private BigDecimal total_presses = BigDecimal.ZERO;
 
@@ -20,11 +25,6 @@ public class GameManager {
     private BigDecimal true_presses = BigDecimal.ZERO;
     public BigDecimal getTruePresses() {
         return true_presses;
-    }
-
-    public void on_key_pressed(char c) {
-        add_to_total_presses(1);
-        add_to_true_presses(1);
     }
 
     private void add_to_total_presses(double val) {
@@ -54,4 +54,10 @@ public class GameManager {
     }
 
 
+
+    public void onKeyPressed(char c) {
+        add_to_total_presses(1);
+        add_to_true_presses(1);
+        KeyPressedMessage.INSTANCE.setLetter(c);
+    }
 }

@@ -12,9 +12,9 @@ class NumbersWindow : ToolWindow {
     override fun getContent() = JBPanel<JBPanel<*>>().apply {
 
         layout = BoxLayout(this, BoxLayout.Y_AXIS)
-        border = BorderFactory.createTitledBorder("Messages")
+        //border = BorderFactory.createTitledBorder("Messages")
 
-        add(KeyPressedMessage.label);
+        //add(KeyPressedMessage.label);
         add(TotalKeyPressMessage.label);
         add(TrueKeyPressMessage.label);
         alignmentX = Component.CENTER_ALIGNMENT
