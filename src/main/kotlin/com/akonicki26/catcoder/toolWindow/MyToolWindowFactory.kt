@@ -12,6 +12,9 @@ import com.akonicki26.catcoder.MyBundle
 import com.akonicki26.catcoder.messages.KeyPressedMessage
 import com.akonicki26.catcoder.services.EditorKeyListener
 import com.akonicki26.catcoder.services.MyProjectService
+import javax.swing.Box
+import java.awt.Component
+import javax.swing.BoxLayout
 import javax.swing.JButton
 
 
@@ -34,6 +37,7 @@ class MyToolWindowFactory : ToolWindowFactory {
         private val service = toolWindow.project.service<MyProjectService>()
 
         fun getContent() = JBPanel<JBPanel<*>>().apply {
+            layout = BoxLayout(this, BoxLayout.Y_AXIS)
             val label = JBLabel(MyBundle.message("randomLabel", "?"))
 
             add(label)
@@ -43,7 +47,10 @@ class MyToolWindowFactory : ToolWindowFactory {
                 }
             })
 
-            add(KeyPressedMessage.getLabel())
+            val numWindow = NumbersWindow()
+            //numWindow.getContent().alignmentX = Component.CENTER_ALIGNMENT
+
+            add(numWindow.getContent())
         }
     }
 }
