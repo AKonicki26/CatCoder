@@ -1,6 +1,7 @@
 package com.akonicki26.catcoder.services
 
 import com.akonicki26.catcoder.MyBundle
+import com.akonicki26.catcoder.core.GameManager
 import com.akonicki26.catcoder.messages.KeyPressedMessage
 import com.intellij.codeInsight.editorActions.TypedHandlerDelegate
 import com.intellij.openapi.editor.Editor
@@ -13,6 +14,8 @@ class EditorKeyListener : TypedHandlerDelegate() {
         MyBundle.message("lastkeytyped", c.toString())
 
         KeyPressedMessage.setLetter(c);
+
+        GameManager.getInstance().on_key_pressed(c);
 
         return Result.CONTINUE
     }

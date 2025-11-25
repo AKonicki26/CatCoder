@@ -38,6 +38,8 @@ class MyToolWindowFactory : ToolWindowFactory {
 
         fun getContent() = JBPanel<JBPanel<*>>().apply {
             layout = BoxLayout(this, BoxLayout.Y_AXIS)
+
+            /*
             val label = JBLabel(MyBundle.message("randomLabel", "?"))
 
             add(label)
@@ -46,6 +48,8 @@ class MyToolWindowFactory : ToolWindowFactory {
                     label.text = MyBundle.message("randomLabel", service.getRandomNumber())
                 }
             })
+
+             */
 
             val numWindow = NumbersWindow()
             //numWindow.getContent().alignmentX = Component.CENTER_ALIGNMENT
