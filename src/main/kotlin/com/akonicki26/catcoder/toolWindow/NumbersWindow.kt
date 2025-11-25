@@ -6,7 +6,7 @@ import java.awt.Component
 import javax.swing.BorderFactory
 import javax.swing.BoxLayout
 
-class NumbersWindow : ToolWindow() {
+class NumbersWindow : ToolWindow {
     override fun getContent() = JBPanel<JBPanel<*>>().apply {
 
         layout = BoxLayout(this, BoxLayout.Y_AXIS)
