@@ -19,5 +19,4 @@ class NumbersWindow : ToolWindow {
         add(TrueKeyPressMessage.label);
         alignmentX = Component.CENTER_ALIGNMENT
     }
-
 }
