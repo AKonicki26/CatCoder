@@ -1,6 +1,7 @@
 package com.akonicki26.catcoder.core;
 
 
+import com.akonicki26.catcoder.core.upgrade.UpgradeManager;
 import com.akonicki26.catcoder.messages.KeyPressedMessage;
 import com.google.common.util.concurrent.ServiceManager;
 
@@ -9,15 +10,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GameManager {
-    private static GameManager instance = new GameManager();
+    private final static GameManager instance = new GameManager();
+
+    private final UpgradeManager upgradeManager = new UpgradeManager();
+
+    public boolean keep_incrementing = true;
     public static GameManager getInstance() {
         return instance;
     }
     private GameManager() {
-
     }
 
-    private BigDecimal total_presses = BigDecimal.ZERO;
+    private BigDecimal total_presses = BigDecimal.valueOf(Long.MAX_VALUE);
 
     public BigDecimal getTotalPresses() {
         return total_presses;
@@ -47,13 +51,11 @@ public class GameManager {
         observers.forEach(GameManagerObserver::truePressesChanged);
     }
 
-    List<GameManagerObserver> observers = new ArrayList();
+    List<GameManagerObserver> observers = new ArrayList<>();
     public void addObserver(GameManagerObserver observer) {
         observers.add(observer);
 
     }
-
-
 
     public void onKeyPressed(char c) {
         add_to_total_presses(1);
