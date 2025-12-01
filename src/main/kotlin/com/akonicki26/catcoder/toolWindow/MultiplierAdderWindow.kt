@@ -10,7 +10,7 @@ class MultiplierAdderWindow : ToolWindow {
 
     var upgrade: Int = 0
     override fun getContent() = JBPanel<JBPanel<*>>().apply {
-        val options = arrayOf(1, 2, 3, 4, 5, 6);
+        val options = arrayOf(2, 3, 4, 5, 6);
         val dropdown = JComboBox(options)
 
         add(AddMultiplerMessage.label)
