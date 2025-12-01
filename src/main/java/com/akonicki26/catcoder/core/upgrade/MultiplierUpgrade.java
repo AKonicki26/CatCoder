@@ -1,5 +1,7 @@
 package com.akonicki26.catcoder.core.upgrade;
 
+import java.math.BigInteger;
+
 public class MultiplierUpgrade extends Upgrade {
     private final int multiplier;
 
@@ -9,5 +11,11 @@ public class MultiplierUpgrade extends Upgrade {
 
     public int getMultiplier() {
         return multiplier;
+    }
+
+
+    @Override
+    public BigInteger upgrade(BigInteger starting) {
+        return starting.multiply(BigInteger.valueOf(getMultiplier()));
     }
 }

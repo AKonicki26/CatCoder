@@ -8,7 +8,7 @@ public abstract class Upgrade {
 
     protected BigInteger cost;
 
-
+    public abstract BigInteger upgrade(BigInteger starting);
 
 
 }

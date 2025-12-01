@@ -44,6 +44,9 @@ class MyToolWindowFactory : ToolWindowFactory {
             //numWindow.getContent().alignmentX = Component.CENTER_ALIGNMENT
 
             add(numWindow.getContent())
+
+            val multiplierAdderWindow = MultiplierAdderWindow()
+            add(multiplierAdderWindow.getContent())
         }
     }
 }
