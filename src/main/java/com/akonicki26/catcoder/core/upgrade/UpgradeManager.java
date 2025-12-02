@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Upgrade manager class for storing upgrades
+ */
 public class UpgradeManager {
     List<Upgrade> upgrades = Arrays.asList(new MultiplierUpgrade(2), new MultiplierUpgrade(2));
     List<Upgrade> unlockedUpgrades = new ArrayList<>();

@@ -2,6 +2,9 @@ package com.akonicki26.catcoder.core.upgrade;
 
 import java.math.BigInteger;
 
+/**
+ * Upgrades that multiples th value by a flat integer
+ */
 public class MultiplierUpgrade extends Upgrade {
     private final int multiplier;
 
